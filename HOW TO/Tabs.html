@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABS</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .boom{
+            border: 2px solid cyan;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: darkkhaki;
+        }
+        .nav{
+            display: inline-block;
+            background-color:  #A0A0A0;
+            width:100%;
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        .B{
+            background-color: #A0A0A0;
+            float: left;
+            margin: 0px;
+            color: white;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 40px;
+            text-decoration: none;
+            line-height: 60px;
+            transition: 0.7s ease;
+        }
+        .boom .nav a:hover{
+            background-color: black;
+            cursor: pointer;
+            transition: 0.7s ease;
+        }
+        .active{
+            background-color: darkkhaki;
+        }
+        
+        #cont{
+            display: block;
+            font-size: 24px;
+            background-color: antiquewhite;
+            margin: 15px;
+            padding: 10px;
+        }
+        #M2,#M3{
+            display: none;
+            transition: 0.7s ease;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="boom">
+        <div class="nav">
+        <a href="#M1" class="B"  onclick="dp(event,'M1')" id="df">INDIA</a>
+        <a href="#M2" class="B" onclick="dp(event,'M2')" id="B1">USA</a>
+        <a href="#M3" class="B" onclick="dp(event,'M3')" id="B2" >ENGLAND</a>
+    </div>
+    <div id="cont">
+        <div id="M1" class="M">
+            INDIA
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt repudiandae maxime molestias cumque possimus ipsa similique deleniti eum incidunt excepturi voluptas minima debitis, molestiae officiis est distinctio dolores dignissimos esse?</div>
+        <div id="M2" class="M">
+            USA
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nulla voluptas non perspiciatis tempore ducimus molestiae iste ipsum expedita, fugit cupiditate, vero ipsa praesentium. Perspiciatis debitis ullam laborum quia neque!
+        </div>
+        <div id="M3" class="M">
+            AUS
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sequi rerum delectus harum repudiandae ullam quisquam officia beatae debitis? Nulla inventore quisquam soluta sequi culpa sed! Dicta repellendus nam voluptatum.
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    function dp(event,a){
+        var i;
+        var b = document.getElementsByClassName('B');
+        var c =document.getElementsByClassName('M')
+        var w = c.length;
+        var e = b.length;
+        for(i = 0;i < e;i++){
+            b[i].classList.remove('active');
+        }
+        event.target.classList.add('active');
+        for(i = 0;i < w;i++){
+            c[i].style.display = 'none';
+        }
+        document.getElementById(a).style.display = "block";   
+    }
+    
+</script>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABS</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body,html{
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    #content{
+        width: 100%;
+        height: 100vh;
+    }
+    #M1,#M2,#M3,#M4{
+        font-size: 30px;
+        display: none;
+        height: 100%;
+        padding: 100px 20px;
+    }
+   
+    #M1 div,#M2 div,#M3 div,#M4 div{
+        font-size: 24px;  
+    }
+    #M1{
+        background-color: red;
+    }
+    #M2{
+        background-color: orange;
+        display: none;
+    }
+    #M3{
+        background-color: green;
+        display: none;
+    }
+    #M4{
+        background-color: blue;
+        display: none;
+    }
+    #nav{
+        margin:0px;
+        padding: 0px;
+        width: 100%;
+        float: left;
+        background-color: darkgray;
+    }
+    #nav a{
+        float: left;
+        display: inline-block;
+        margin:0px;
+        font-size: 30px;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 60px;
+        width: 25%;
+        transition: 0.5s ease;
+    }
+    a:hover{
+        background-color: lightgray;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div id="nav">
+        <a  id="B1" class="hide1" onclick="dp('M1','B1','red')">HOME</a>
+        <a  id="B2" class="hide1" onclick="dp('M2','B2','orange')">NEWS</a>
+        <a  id="B3" class="hide1" onclick="dp('M3','B3','green')">ABOUT</a>
+        <a  id="B4" class="hide1" onclick="dp('M4','B4','blue')">CONTACT</a>
+    </div>
+    <div id="content">
+        <div class="hide" id="M1">
+            <h1>HOME</h1>
+            <div>This is Home Page.</div>
+        </div>
+        <div class="hide" id="M2">
+            <h1>NEWS</h1>
+            <div>This is News Page.</div>
+        </div>
+        <div class="hide" id="M3">
+            <h1>ABOUT</h1>
+            <div>This is Information Page.</div>
+        </div>
+        <div class="hide" id="M4">
+            <h1>CONTACT</h1>
+            <div>This is Contact Page.</div>
+        </div>
+    </div>
+</body>
+    <script>
+        function dp(contry,elem,color){
+            var n = document.getElementsByClassName('hide');
+            var n1 = document.getElementsByClassName('hide1');
+           console.log(n,n1,n[0],n1[0],contry)
+            for(var i =0;i<n.length;i++){
+                n[i].style.display = "none";
+            }
+            for(var i =0;i<n1.length;i++){
+                n1[i].style.backgroundColor = "";
+            }
+            document.getElementById(contry).style.display = "block";
+            document.getElementById(elem).style.backgroundColor = color;
+        }
+    </script>
+</html>

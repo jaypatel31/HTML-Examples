@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZOOM</title>
+    <style>
+        #H{
+            margin: auto;
+            text-align: center;
+        }
+        #H {
+            width: 30%;
+            height: 30vh;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .zoom{
+            animation-name: zoom;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes zomm {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+        #blank{
+            transition: 0.5s ease;
+            margin: auto;
+            text-align: center;  
+        }
+        #blank img{
+            margin-top: 30px;
+            display: inline-block;
+            height: 0px;
+            width: 0px;
+            transition: 0.5s ease
+        }
+        .close{
+            display: none;
+            font-size: 40px;
+            font-weight: bolder;
+            float:right;
+            cursor: pointer;
+        }
+        #H:hover{
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="zm()" >
+        <img id="H"   src="https://www.w3schools.com/howto/img_snow_wide.jpg">
+    </div>
+    <div id="blank">
+        <img id="J"  class="zoom" src="https://www.w3schools.com/howto/img_snow_wide.jpg">
+        <span class="close" id="CS" onclick="op()">&times;</span>
+    </div>
+</body>
+<script>
+    function zm(){
+        document.getElementById('H').style.height = "0px";
+        document.getElementById('H').style.width = "0px";
+        document.getElementById('J').style.height = "500px";
+        document.getElementById('J').style.width = "800px";
+        document.getElementById('CS').style.display = "block";
+    }
+    function op(){
+        document.getElementById('H').style.height = "30vh";
+        document.getElementById('H').style.width = "30%";
+        document.getElementById('J').style.height = "0px";
+        document.getElementById('J').style.width = "0px";
+        document.getElementById('CS').style.display = "none";
+    }
+</script>
+</html>

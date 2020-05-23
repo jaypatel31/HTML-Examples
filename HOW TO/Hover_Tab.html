@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>TABS</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body,html{
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    #nav{
+        margin:0px;
+        padding: 0px;
+        width: 100%;
+        float: left;
+        background-color: lightgray;
+    }
+    #nav #B1,#nav #B2,#nav #B3,#nav #B4{
+        float: left;
+        display: inline-block;
+        margin:0px;
+        font-size: 30px;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 60px;
+        transition: 0.5s ease;
+    }
+    #B5 i{
+        position: absolute;
+        right: 0px;
+        display: none;
+        margin:0px;
+        font-size: 30px;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 60px;
+        transition: 0.5s ease;
+        
+    }
+    a:hover,i:hover{
+        background-color: darkgray;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+    @media only screen and (max-width:700px){
+            #B5 i{
+                display: inline-block;
+            }
+            #nav #B1,#nav #B2,#nav #B3,#nav #B4{
+                text-align: left;
+            }
+    }
+</style>
+</head>
+<body>
+    <div id="nav">
+        <a  id="B1" class="hide1" onclick="dp('B1')">HOME</a>
+        <a  id="B2" class="hide1" onclick="dp('B2')">NEWS</a>
+        <a  id="B3" class="hide1" onclick="dp('B3')">ABOUT</a>
+        <a  id="B4" class="hide1" onclick="dp('B4')">CONTACT</a>
+        <a  id="B5" onclick="op()">
+             <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</body>
+    <script>
+        function dp(id){
+            var n =document.getElementsByClassName('hide1'); 
+            for(var i =0;i<n.length;i++){
+                n[i].style.backgroundColor = "";
+            }
+            document.getElementById(id).style.backgroundColor = "dodgerblue"
+        }
+       var t = "t";
+       function op(){
+           var n =document.getElementsByClassName('hide1');
+            if(t=="t"){
+                for(var i =0;i<n.length;i++){
+                    n[i].style.width = "100%";
+                }   
+                t="o";
+            }
+            else{
+                for(var i =0;i<n.length;i++){
+                    n[i].style.width = "";
+                }
+                t="t";
+            }
+       } 
+    </script>
+</html>

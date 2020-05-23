@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PILL</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #nav{
+            margin-top: 10px;
+            width: 100%;
+            background-color: #f1f1f1;
+            padding: 20px 10px;
+            overflow: hidden;
+           
+        }
+        #nav div{
+            float: right;
+        }
+        #nav a {
+            font-size: 24px;
+            padding: 0 10px; 
+            margin-left: 5px;
+            display: inline-block;
+            line-height: 60px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            border-radius: 10px;
+            font-family: sans-serif;
+        }
+        #nav a#first{
+            float: left;
+            font-size: 30px;
+            font-weight: bold;
+            background-color: transparent;
+        }
+        #nav a:hover{
+            background-color: grey;
+            transition: 0.5s ease;
+        }
+        #nav a.active{
+            background-color:#429CFA;
+        }
+        @media only screen and (max-width: 650px){
+            #nav a{
+                width: 100%;
+                display: block;
+            }
+            #nav div,#nav a#first{
+                float: none;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <a id="first">COMPANYLOGO</a>
+        <div>
+        <a class="active">HOME</a> 
+        <a>NEWS</a>
+        <a>ABOUT</a>
+    </div>     
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABS</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+    #content{
+        width: 100%;
+        height: 400px;
+        text-align: center;
+        margin-bottom: auto;
+    }
+    #M1,#M2,#M3,#M4{
+        font-size: 40px;
+        line-height: 400px;
+        display: none;
+    }
+    #M1{
+        background-color: red;
+        height: 100%;
+    }
+    #M2{
+        background-color: orange;
+        display: none;
+    }
+    #M3{
+        background-color: green;
+        display: none;
+    }
+    #M4{
+        background-color: blue;
+        display: none;
+    }
+    #nav{
+        width: 100%;
+        float: left;
+        background-color: darkgray;
+    }
+    #nav a{
+        float: left;
+        display: inline-block;
+        margin:0px;
+        font-size: 30px;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 60px;
+        width: 25%;
+        transition: 0.5s ease;
+    }
+    a:hover{
+        background-color: lightgray;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div id="content">
+        <div class="hide" id="M1">LONDON</div>
+        <div class="hide" id="M2">INDIA</div>
+        <div class="hide" id="M3">OSLA</div>
+        <div class="hide" id="M4">AUSTRALIA</div>
+    </div>
+    <div id="nav">
+        <a  id="B1" class="hide1" onclick="dp('M1','B1','red')">LONDON</a>
+        <a  id="B2" class="hide1" onclick="dp('M2','B2','orange')">INDIA</a>
+        <a  id="B3" class="hide1" onclick="dp('M3','B3','green')">OSLA</a>
+        <a  id="B4" class="hide1" onclick="dp('M4','B4','blue')">AUSTRALIA</a>
+    </div>
+</body>
+    <script>
+        function dp(contry,elem,color){
+            var n = document.getElementsByClassName('hide');
+            var n1 = document.getElementsByClassName('hide1');
+           console.log(n,n1,n[0],n1[0],contry)
+            for(var i =0;i<n.length;i++){
+                n[i].style.display = "none";
+        }
+        for(var i =0;i<n1.length;i++){
+                n1[i].style.backgroundColor = "";
+        }
+        document.getElementById(contry).style.display = "block";
+        document.getElementById(elem).style.backgroundColor = color;
+        }
+    </script>
+</html>

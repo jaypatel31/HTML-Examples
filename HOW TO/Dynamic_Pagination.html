@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGINATION</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #pg{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #pg div{
+            font-size: 24px;
+            padding: 0 10px;
+            float: left;
+            border: 2px solid transparent;
+            display: inline-block;
+            line-height: 30px;
+        }
+        #pg div:hover{
+            background-color: gray;
+            border: 2px solid gray;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+        #pg .active{
+            background-color: cyan;
+            font-size: 30px;
+            transition: 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="pg">
+        <div onclick="nt(event)" id="bk">&laquo;</div>
+        <div class="active">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div id="fw" onclick="nt(event)">&raquo;</div>
+    </div>
+</body>
+<script>
+    window.onclick = function(){
+        var a = document.getElementsByTagName('div');
+        if(event.target.matches('div')){
+            if(!event.target.matches('#bk,#fw')){
+                for(var i = 0;i<a.length;i++){
+                a[i].classList.value = "";
+                }
+                event.target.classList.value = "active";
+            }
+        }
+    }
+    function nt(event){
+        var a = document.getElementsByTagName('div');
+        if(event.target.matches('#fw')){
+            for(var i = 2;i<a.length-2;i++){
+                var r = a[i].classList.value;
+                if(r=="active"){
+                    a[i].classList.value = "";
+                    a[i+1].classList.value = "active";
+                    break;
+                }
+            }
+        }
+        else{
+            for(var i = 3;i<a.length-1;i++){
+                var r = a[i].classList.value;
+                if(r=="active"){
+                    a[i].classList.value = "";
+                    a[i-1].classList.value = "active";
+                    break;
+                }
+            }
+        }
+    }
+</script>
+</html>

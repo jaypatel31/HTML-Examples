@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCORDIAN</title>
+    <style>
+        #C{
+            background-color: #f2f2f2;
+            font-size: 30px;
+            font-family: arial;
+            font-weight: bold;
+            padding-top: 5px;
+            border-bottom: 2px solid black;
+        }
+        #C:hover{
+            background-color: grey;
+            transition: 0.5s ease;
+            cursor: pointer;
+        }
+        #S1,#S2,#S3{
+            float: right;
+            clear:right;
+        }
+        #M1,#M2,#M3{
+            display:none;
+            background-color: white;
+            font-size: 24px;
+            padding: 25px;
+            transition: 0.7s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="C" onclick="dp(1)">
+        <div>FIRST <div id="S1">+</div></div>
+        
+        <div id="M1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo odit quas ipsum, itaque pariatur accusamus inventore id aliquam voluptatibus nam incidunt dolore porro. Adipisci placeat ipsam sed mollitia debitis ut!</div>
+    </div>
+    <div id="C" onclick="dp(2)">
+        <div>SECOND <div id="S2">+</div></div>
+        
+        <div id="M2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo odit quas ipsum, itaque pariatur accusamus inventore id aliquam voluptatibus nam incidunt dolore porro. Adipisci placeat ipsam sed mollitia debitis ut!</div>
+    </div>
+    <div id="C" onclick="dp(3)">
+        <div>THIRD <div id="S3">+</div></div>
+       
+        <div id="M3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo odit quas ipsum, itaque pariatur accusamus inventore id aliquam voluptatibus nam incidunt dolore porro. Adipisci placeat ipsam sed mollitia debitis ut!</div>
+    </div>
+</body>
+<script>
+    let t="t";
+    function dp(q){
+        if(q==1){
+            if(t=="t"){
+                document.getElementById('S1').innerHTML = "-";
+                document.getElementById('M1').style.display = "block";
+                t="o";
+            }
+            else{
+                document.getElementById('S1').innerHTML = "+";
+                document.getElementById('M1').style.display = "none";
+                t="t"
+            }
+        }
+        if(q==2){
+            if(t=="t"){
+                document.getElementById('S2').innerHTML = "-";
+                document.getElementById('M2').style.display = "block";
+                t="o";
+            }
+            else{
+                document.getElementById('S2').innerHTML = "+";
+                document.getElementById('M2').style.display = "none";
+                t="t"
+            }
+        }
+        if(q==3){
+            if(t=="t"){
+                document.getElementById('S3').innerHTML = "-";
+                document.getElementById('M3').style.display = "block";
+                t="o";
+            }
+            else{
+                document.getElementById('S3').innerHTML = "+";
+                document.getElementById('M3').style.display = "none";
+                t="t"
+            }
+        }
+    }
+</script>
+</html>

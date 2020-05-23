@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #container{
+            background-color: #111111;
+            width: 100%;
+            color: white;
+            float: left;
+        }
+        #container a{
+            float: left;
+            display: block;
+            font-size: 24px;
+            background-color: transparent;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        #container a:hover{
+            background-color: grey;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+        #main{
+            margin: 0;
+            position: absolute;
+            padding: 0;
+            width: 100%;
+            background-color:#f1f1f1;
+            top: -310%;
+            z-index: -1;
+            height: 93vh;
+            transition: 0.5s ease ;
+        }
+        #main h2 {
+            font-size:32px;
+            line-height:130px;
+            color:white;
+            margin: 0;
+            width: 100%;
+            padding-left:30px;
+            background-color: red;
+        }
+        #main div{
+            width: 33%;
+            float: left;
+            
+        } 
+        #main div a,h3{
+            display: block;
+            font-size: 24px;
+            width: 50%;
+            padding-left: 5px;
+            line-height: 60px;
+            text-align: center;
+        } 
+        #main div a:hover{
+            background-color: grey;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <a>HOME</a>
+        <a >NEWS</a>
+        <a >TREND</a>
+        <a class="B" onmouseover="dp()" onmouseout="op()">DROPDOWN</a>
+        <a>ABOUT</a>
+    </div>
+    <div id="main" onmouseover="dp()" onmouseout="op()">
+        <h2>MEGA MENU</h2>
+        <div id="M1">
+            <h3>MENU1</h3>
+            <a>LINK1</a>
+            <a>LINK2</a>
+            <a>LINK3</a>
+        </div>
+        <div id="M2">
+            <h3>MENU2</h3>
+            <a>LINK1</a>
+            <a>LINK2</a>
+            <a>LINK3</a>
+        </div>
+        <div id="M3">
+            <h3>MENU3</h3>
+            <a>LINK1</a>
+            <a>LINK2</a>
+            <a>LINK3</a>
+        </div>
+    </div>
+</body>
+<script>
+    function dp(){
+        document.getElementById('main').style.top = "7%";
+    }
+    function op(){
+        document.getElementById('main').style.top = "-310%";
+    }
+</script>
+</html>

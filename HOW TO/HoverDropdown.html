@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DROPDOWN</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        #left{
+            margin: 0px;
+            display: inline-block;
+            float: left;
+        }
+        #right{
+            margin: 0px;
+            display: inline-block;
+            float: right;
+            clear: right;
+        }
+        button{
+            font-size: 32px;
+            padding: 8px;
+            background-color: green;    
+        }
+        #right button{
+            position: relative;
+            right: 0;
+            top: 0px;
+        }
+        a{
+            display:none;
+            
+            background-color: #f1f1f1;
+            font-size: 24px;
+            padding: 0px 10px;
+            line-height: 60px;
+          
+            
+            transition: 0.5s ease;
+        }
+        #boom{
+            position: absolute;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        #left:hover a  {
+            display: block;
+            transition: 0.5s ease;
+        }
+        #right:hover a  {
+            display: block;
+            transition: 0.5s ease;
+        }
+        a:hover{
+            background-color: gray;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: darkgreen;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="left">
+        <button type="button" onmouseover="dp('h1')" onmouseout="op('h1')">LEFT</button>
+       <div id="boom">
+        <a class="h1">LINK1</a>
+        <a class="h1">LINK2</a>
+        <a class="h1">LINK3</a>
+    </div>
+    </div>
+    <div id="right">
+        <button type="button" onmouseover="dp('h2')" onmouseout="op('h1')">RIGHT</button>
+        <div id="boom">
+        <a class="h2">LINK1</a>
+        <a class="h2">LINK2</a>
+        <a class="h2">LINK3</a>
+    </div>
+    </div>
+</body>
+
+    
+</html>

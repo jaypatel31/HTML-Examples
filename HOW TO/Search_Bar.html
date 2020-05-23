@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>TABS</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body,html{
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    #nav{
+        margin:0px;
+        padding: 0px;
+        width: 100%;
+        float: left;
+        background-color: #E9E9E9;
+    }
+    #nav a{
+        display:inline-block;
+        margin:0px;
+        float: left;
+        font-size: 30px;
+        text-decoration: none;
+        color: black;
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 60px;
+        transition: 0.5s ease;
+    }
+    a:hover{
+        background-color: darkgray;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+    #nav div{
+        display: inline-block;
+        float: right;
+        clear: right;
+        padding: 0px;
+        margin-top: 15px;
+        margin-right: 16px;
+    }
+    input , button{
+        font-size: 20px;
+        line-height: 15px;
+        margin: 0px;
+        float: left;
+        height: 30px;
+    }
+    button{
+        background-color:#d7d7d7;
+        border: 1px solid lightgray;
+    }
+    button:hover{
+        background-color: darkgray;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+    @media only screen and (max-width: 800px) {
+        #nav a,#nav div {
+            display: block;
+            width:100%;
+            margin-right: 0px;
+            margin-top: 0px;
+        }
+        input,button{
+            display: block;
+            width:100%;
+            float: 0px;
+            height: auto;
+            font-size: 30px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div id="nav">      
+        <a  id="B1" class="hide1" onclick="dp('B1')">HOME</a>
+        <a  id="B2" class="hide1" onclick="dp('B2')">CONTACT</a>
+        <a  id="B3" class="hide1" onclick="dp('B3')">ABOUT</a>
+        <div>
+        <input type="text" placeholder="Search..." id="se" >
+        <button type="button"><i class="fa fa-search"></i></button>
+    </div>
+    </div>
+</body>
+<script>
+    
+</script>
+</html>

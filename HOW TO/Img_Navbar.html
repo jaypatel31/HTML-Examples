@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMG NAV</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        #img{
+            background-image: url('https://www.w3schools.com/howto/img_nature.jpg');
+            
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            position:relative ;
+            filter: blur(0px);
+            transition: 0.7s ease;
+        }
+         #nav{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            line-height: 60px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            margin: 0px;
+            padding: 0px;
+        }
+        #nav a{
+            font-size: 30px;
+            font-family: serif;
+            padding: 19px 10px;
+        }
+         #nav a:hover {
+            background-color: grey;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="img"></div>
+    <div id="nav">
+        <a onmouseover="blr()" onmouseout="cl()">HOME</a>
+        <a onmouseover="blr()" onmouseout="cl()">NEWS</a>
+        <a onmouseover="blr()" onmouseout="cl()">ABOUT</a>
+        <a onmouseover="blr()" onmouseout="cl()">CONTENT</a>
+    </div>
+</body>
+<script>
+    function blr(){
+            document.getElementById('img').style.filter = "blur(3px)";
+        }
+    function cl(){
+            document.getElementById('img').style.filter = "blur(0px)";
+        }
+</script>
+</html>

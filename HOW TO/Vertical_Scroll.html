@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORIZONTAL</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .nav{
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            width: 255px;
+            overflow-y: auto;
+            height: 300px;
+        }
+        .nav a {
+            display: block;
+            font-size: 24px;
+            width: 100%;
+            padding-left: 20px;
+            line-height: 60px;
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+        }
+        .nav a:hover{
+            background-color:  #ccc;
+        }
+        .nav a.active{
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#" class="active">Home</a>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+        <a href="#">Link 5</a>
+        <a href="#">Link 6</a>
+        <a href="#">Link 7</a>
+        <a href="#">Link 8</a>
+        <a href="#">Link 9</a>
+        <a href="#">Link 10</a>
+      </div>
+</body>
+</html>

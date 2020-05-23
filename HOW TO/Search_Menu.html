@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>TABS</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body,html{
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    #nav{
+        margin:0px;
+        padding: 0px;
+        width: 20%;
+        float: left;
+        height: 100vh;
+        overflow: auto;
+        background-color: lightgray;
+    }
+    #nav a{
+        display:block;
+        margin:0px;
+        font-size: 30px;
+        text-decoration: none;
+        color: black;
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 60px;
+        transition: 0.5s ease;
+        width:100%;
+    }
+    a:hover{
+        background-color: darkgray;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+    #nav div{
+        font-size: 30px;
+        font-weight: bolder;
+        padding: 8px;
+        margin-bottom: 5px;
+        color: black;
+    }
+    input{
+        font-size: 24px;
+        padding: 5px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+    <div id="nav">
+        <div>SEARCH</div>
+        <input type="text" placeholder="Search..." id="se" onkeyup="fd()">
+        <a  id="B1" class="hide1" onclick="dp('B1')">HTML</a>
+        <a  id="B2" class="hide1" onclick="dp('B2')">CSS</a>
+        <a  id="B3" class="hide1" onclick="dp('B3')">JAVASCRIPT</a>
+        <a  id="B4" class="hide1" onclick="dp('B4')">C</a>
+        <a  id="B5" class="hide1" onclick="dp('B1')">C++</a>
+        <a  id="B6" class="hide1" onclick="dp('B2')">PHP</a>
+        <a  id="B7" class="hide1" onclick="dp('B3')">SQL</a>
+        <a  id="B8" class="hide1" onclick="dp('B4')">NODE JS</a>
+    </div>
+</body>
+<script>
+    function fd(){
+        var a =  "" + se.value + ""; 
+        var b = new RegExp(a,"i");
+        var n = document.getElementsByClassName('hide1');
+        console.log(n[0].innerHTML)
+        for(var i =0;i<n.length;i++){
+            var t = n[i].innerHTML.match(b);
+            if(t!==null){
+                n[i].style.display = "block";
+            }
+            else{
+                n[i].style.display = "none";
+            }
+        }
+    }
+</script>
+</html>

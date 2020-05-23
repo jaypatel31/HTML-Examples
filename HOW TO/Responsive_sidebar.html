@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESPONSIVE</title>
+    <style>
+         *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+            transition: 0.7s;
+        }
+        #nav{
+            position: fixed;
+            top:0px;
+            left: 0px;
+            height: 100vh;
+            margin: 0px;
+            background-color: #f1f1f1;
+            width: 15%;  
+        }
+        #nav a {
+            display: block;
+            width: 100%;
+            font-family: sans-serif;
+            font-size: 30px;
+            color: black;
+            padding-left: 5px;
+            line-height: 60px;
+            margin: 0px;
+            transition: 0.7s;
+        }
+        #nav a:hover{
+            background-color:gray;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+        #content{
+            margin-left:250px;
+            
+            height:700px;
+            font-size: 24px;
+            padding: 18px;
+        }
+        a:nth-child(1){
+            background-color: #4CAF50;
+        }
+        @media only screen and (max-width: 850px){
+                #nav a{
+                    display:inline-block;
+                    width: auto;
+                    float: left;
+                    padding: 0px 10px;
+                }
+                #nav{
+                    width: 100%;
+                    height:auto;
+                }
+                #content{
+                    margin-top:50px;
+                    margin-left: 2px;
+                }
+        }
+        @media only screen and (max-width:600px){
+                #nav a{
+                    width: 100%;
+                    text-align: center;
+                }
+                #content{
+                    margin-top:190px;
+                }
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <a>HOME</a>
+        <a>SERVICE</a>
+        <a>CLIENT</a>
+        <a>CONTACT</a>
+    </div>
+    <div id="content">
+        <h2>Responsive Sidebar Example</h2>
+        <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
+        <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+        <h3>Resize the browser window to see the effect.</h3>
+      </div>
+</body>
+</html>

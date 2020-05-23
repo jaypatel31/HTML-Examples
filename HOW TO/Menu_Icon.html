@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU ICON</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+        #container div{
+            background-color: aqua;
+            width: 35px;
+            height: 5px;
+            margin: 8px;
+            transition: 0.4s ease;
+        }
+        .c .rot1{
+            transform: rotate(-45deg) translate(-11px, 6px);
+        }
+        .c .rot2{
+            opacity: 0;
+        }
+        .c .rot3{
+            transform: rotate(45deg) translate(-9px, -8px);
+        }
+    </style>
+</head>
+<body>
+    <div id="container" onclick="dp(this)">
+        <div class="rot1"></div>
+        <div class="rot2"></div>
+        <div class="rot3"></div> 
+    </div>
+</body>
+<script>
+    function dp(a){
+        a.classList.toggle('c');
+    }
+</script>
+</html>

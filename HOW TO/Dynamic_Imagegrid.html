@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .row{
+            width: 100%;
+            margin: 140px 0;
+            padding: 0;
+        }
+        .column{
+            display: inline-block;
+            width: 24%;
+            margin:0;
+            padding:0;
+        }
+            .column1{
+                width:24%;
+            }
+            .column2{
+                width:49%;
+                display: inline-block;
+            }
+            .column3{
+                width:100%;
+                display: inline-block;
+            }
+            #B{
+                width:100%;
+                text-align: center; 
+                margin:20px 0; 
+                position: fixed;
+                top: 0;
+            }
+            #B a{
+                display: inline-block;
+                font-size: 30px;
+                padding:0px 5px;
+               
+                font-family: Arial, Helvetica, sans-serif;
+                border: 2px solid black;
+            }
+            #B a:hover{
+                background-color: grey;
+                cursor: pointer;
+                transition: 0.5s ease;
+            }
+            .bttn{
+                background-color: black;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <div id="B">
+        <a class="B" onclick="dp('column1',event)">1</a>
+        <a class="B" onclick="dp('column2',event)">2</a>
+        <a class="B" onclick="dp('column3',event)">3</a>
+    </div>
+    <div class="row"> 
+        <div class="column">
+          <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+        </div>  
+        <div class="column">
+          <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+          <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+        </div>
+      </div>
+</body>
+<script>
+   
+    function dp(a,event){
+        var i;
+        var b = document.getElementsByClassName('column');
+        var c = document.getElementsByClassName('B');
+        for(i = 0;i < c.length;i++){
+            c[i].classList.remove('bttn');
+        }
+        for(i = 0;i < b.length;i++){
+            b[i].classList.remove('column1','column2','column3');
+        }
+        for(i = 0;i < b.length;i++){
+            b[i].classList.add(a);
+        }
+        event.target.classList.add('bttn');
+    }
+</script>
+</html>

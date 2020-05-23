@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #container{
+            background-color: #111111;
+            width: 15%;
+            height: 100vh;
+            color: grey;
+        }
+        button{
+            background-color: transparent;
+            color: grey;
+            border: none;
+            outline: none;
+            margin: 0;
+        }
+        #container a,button{
+            display: block;
+            font-size: 24px;
+            padding: 10px 0;
+            padding-left: 15px;
+            width: 100%;
+            text-align: left;
+        }
+        #container a:hover,button:hover{
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.5s ease;
+        }
+        #container #drp #main{
+            background-color: #262626;
+            transition: 0.7s ease-in;
+        }
+        .active{
+            display: block;
+            
+        }
+        .inactive{
+            display: none;
+        }
+        .pop{
+            background-color: #008000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <a>HOME</a>
+        <a>NEWS</a>
+        <a>TREND</a>
+        <div id="drp">
+            <button type="button"  onclick="dp()" id="bt">DROPDOWN</button>
+            <div id="main" class="inactive">
+                <a>LINK1</a>
+                <a>LINK2</a>
+                <a>LINK3</a>
+            </div>
+        </div>
+        <a>ABOUT</a>
+    </div>
+</body>
+<script>
+    function dp(){
+        var q =document.getElementById('main').classList.value;
+        if(q=="inactive"){
+            document.getElementById('main').classList.value = "active";
+            document.getElementById('bt').classList.value = "pop"
+        }
+        else{
+            document.getElementById('main').classList.value = "inactive";
+            document.getElementById('bt').classList.value = "";
+        }
+    }
+</script>
+</html>
