@@ -1,2 +1,2 @@
-# HTML-Examples
-All The Html-CSS-javascript Example Will Be Posted here.
+# HTML/CSS/JAVASCRIPT-Examples
+Some of the ready to use navbar template.
